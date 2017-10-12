@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.mybijie.MainActivity"
+    android:background="#EEE">
+    <FrameLayout
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/zhuye_fl"/>
+
+    <LinearLayout
+        android:id="@+id/daohang"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#fff"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/dingdan"
+            style="@style/shouye_daohang">
+
+            <ImageView
+                android:id="@+id/dingdan_img"
+                style="@style/daohang_img"
+                android:background="@drawable/daohang_dingdan2" />
+
+            <TextView
+                android:id="@+id/dingdan_tv"
+                style="@style/daohang_tv"
+                android:text="订单" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dianpu"
+            style="@style/shouye_daohang">
+
+            <ImageView
+                android:id="@+id/dianpu_img"
+                style="@style/daohang_img"
+                android:background="@drawable/daohang_dianpu1" />
+
+            <TextView
+                android:id="@+id/dianpu_tv"
+                style="@style/daohang_tv"
+                android:text="店铺"
+                android:textColor="@color/daohang_tv_lan" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/xiaoxi"
+            style="@style/shouye_daohang">
+
+            <ImageView
+                android:id="@+id/xiaoxi_img"
+                style="@style/daohang_img"
+                android:background="@drawable/daohang_xiaoxi2" />
+
+            <TextView
+                android:id="@+id/xiaoxi_tv"
+                style="@style/daohang_tv"
+                android:text="消息" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/wode"
+            style="@style/shouye_daohang">
+
+            <ImageView
+                android:id="@+id/wode_img"
+                style="@style/daohang_img"
+                android:background="@drawable/daohang_wode2" />
+
+            <TextView
+                android:id="@+id/wode_tv"
+                style="@style/daohang_tv"
+                android:text="我的" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

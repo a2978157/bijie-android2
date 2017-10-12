@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#3000"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="订单"
+                android:textSize="20sp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="历史" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                style="@style/dingdai_tv"
+                android:text="新订单" />
+
+            <TextView
+                style="@style/dingdai_tv"
+                android:text="进行中" />
+
+            <TextView
+                style="@style/dingdai_tv"
+                android:text="已完成" />
+
+            <TextView
+                style="@style/dingdai_tv"
+                android:text="已取消" />
+
+            <TextView
+                style="@style/dingdai_tv"
+                android:text="售后" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000" />
+
+        <ScrollView
+            android:id="@+id/dingdan_sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Utils.MyListView
+                android:id="@+id/dingdan_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </ScrollView>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/fudong_fanhui"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="15dp"
+        android:src="@mipmap/ic_launcher"
+        android:visibility="gone"/>
+</RelativeLayout>

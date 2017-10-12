@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#00f">
+        <Button
+            android:id="@+id/dingdan_zhankai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="展开"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/dingdan_lvll"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#0f0"
+        android:visibility="gone">
+
+    </LinearLayout>
+</LinearLayout>

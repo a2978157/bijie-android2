@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical">
+
+    <RelativeLayout style="@style/daohanglan_rl">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+        <LinearLayout style="@style/daohanglan_ll"
+            android:id="@+id/dianzhangxinxi_fanhui">
+
+            <ImageView style="@style/daohanglan_fanhui"/>
+        </LinearLayout>
+
+        <TextView
+            style="@style/daohanglan_tv"
+            android:text="完善认证信息" />
+
+        <TextView
+            style="@style/daohanglan_tv2"
+            android:text="提交" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/bai">
+
+                <TextView
+                    style="@style/dianyuanxinxi_name"
+                    android:text="店铺头像" />
+
+                <ImageView
+                    android:id="@+id/dianzhangxinxi_touxiang"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="29dp"
+                    android:src="@drawable/dianzhangxinxi_touxiang" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/dianyuanxinxi_rl"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    style="@style/dianyuanxinxi_name"
+                    android:text="店铺名称" />
+
+                <EditText
+                    style="@style/dianyuanxinxi_edit"
+                    android:hint="必填，输入店面的门店名"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                style="@style/dianyuanxinxi_rl"
+                android:layout_marginTop="1dp">
+
+                <TextView
+                    style="@style/dianyuanxinxi_name"
+                    android:text="店铺电话" />
+
+                <EditText
+                    style="@style/dianyuanxinxi_edit"
+                    android:hint="请输入主机号或者手机号" />
+            </RelativeLayout>
+            <RelativeLayout
+                style="@style/dianyuanxinxi_rl"
+                android:layout_marginTop="1dp">
+
+                <TextView
+                    style="@style/dianyuanxinxi_name"
+                    android:text="选择店铺地址" />
+
+                <EditText
+                    style="@style/dianyuanxinxi_edit"
+                    android:hint="选择门店地址" />
+            </RelativeLayout>
+            <RelativeLayout
+                style="@style/dianyuanxinxi_rl"
+                android:layout_marginTop="1dp">
+
+                <TextView
+                    style="@style/dianyuanxinxi_name"
+                    android:text="经营者姓名" />
+
+                <EditText
+                    style="@style/dianyuanxinxi_edit"
+                    android:hint="请输入经营者真实姓名" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/dianyuanxinxi_rl"
+                android:layout_marginTop="1dp">
+
+                <TextView
+                    style="@style/dianyuanxinxi_name"
+                    android:text="所属行业" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/dianzhangxinxi_xuanzhe"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:text="请选择"
+                    android:textColor="@color/dianyuanxinxi_edit"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/dianzhangxinxi_xuanzhe"
+                    android:layout_width="6dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="14dp"
+                    android:background="@drawable/dianzhangxinxi_xuanzhe" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="14dp"
+                android:background="@color/bai">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="10dp"
+                    android:text="上传证件"
+                    android:textColor="@color/dianyuanxinxi_name"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="14dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/dianzhangxinxi_yinyezhezhao"
+                        android:layout_width="157dp"
+                        android:layout_height="103dp"
+                        android:background="@drawable/renzheng_yingye" />
+
+                    <ImageView
+                        android:id="@+id/dianzhangxinxi_jingying"
+                        android:layout_width="157dp"
+                        android:layout_height="103dp"
+                        android:layout_marginTop="25dp"
+                        android:background="@drawable/renzheng_jingying" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

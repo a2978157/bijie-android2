@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bai"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout style="@style/daohanglan_rl">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+            <LinearLayout
+                android:id="@+id/kaidian_fanhui"
+                style="@style/daohanglan_ll">
+
+                <ImageView style="@style/daohanglan_fanhui" />
+            </LinearLayout>
+            <TextView
+                style="@style/daohanglan_tv"
+                android:text="免费开店" />
+
+            <TextView
+                style="@style/daohanglan_tv2"
+                android:text="开店帮助" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/kaidian_iv"
+        android:layout_width="169dp"
+        android:layout_height="175dp"
+        android:layout_marginTop="29dp"
+        android:background="@drawable/kaidian_dianputubiao" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="请选择一下你的店铺吧"
+        android:textColor="#d1d1d1"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/kaidian_shitidian"
+                android:layout_width="117dp"
+                android:layout_height="34dp"
+                android:background="@drawable/kaidian_shitidianselector"
+                android:button="@null"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/kaidian_wangdian"
+                android:layout_width="117dp"
+                android:layout_height="34dp"
+                android:background="@drawable/kaidian_wangdianselector"
+                android:button="@null" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/kaidian_xuanzhezhiwei"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="26dp">
+
+        <TextView
+            android:id="@+id/kaidian_xuanzhetv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:text="请选择职位"
+            android:textColor="#333333"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/kaidian_zhankaitv"
+            android:layout_width="14dp"
+            android:layout_height="9dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/kaidian_zhankai" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/kaidian_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/dianyuanxinxi_edit" />
+
+    <LinearLayout
+        android:layout_marginTop="12dp"
+        android:id="@+id/kaidian_zhankaijiemian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/kaidian_woshidianzhang"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:text="我是店长"
+            android:textSize="17sp"
+            android:clickable="true"/>
+
+        <View
+            android:layout_width="160dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@color/dianyuanxinxi_edit"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/kaidian_woshidianyuan"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="我是店员"
+            android:textSize="17sp"
+            android:gravity="center"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/dianyuanxinxi_edit" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/kaidian_xiayibu"
+        android:layout_width="337dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/kaidian_xiayibu" />
+</LinearLayout>

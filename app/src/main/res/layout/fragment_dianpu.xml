@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        style="@style/daohanglan_rl">
+
+        <TextView
+            style="@style/daohanglan_tv"
+            android:text="店铺" />
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/dianpu_sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@color/bai"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/dianpu_chenggongkaidian"
+                    android:text="1.成功开店" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="17dp"
+                    android:src="@drawable/dianpu_fanhui" />
+
+                <TextView
+                    style="@style/dianpu_chenggongkaidian"
+                    android:text="2.发布开店" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="17dp"
+                    android:src="@drawable/dianpu_fanhui" />
+
+                <TextView
+                    style="@style/dianpu_chenggongkaidian"
+                    android:text="3.坐等收钱" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="123dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/bai"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/dianpu_kaidian"
+                    android:layout_width="116dp"
+                    android:layout_height="31dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/dianpu_kaidian" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="精准用户群体推送，祝你营销"
+                    android:textColor="#999999"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="71dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/bai"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    style="@style/dianpu_shoukuanll">
+
+                    <ImageView
+                        android:id="@+id/dianpu_shoukuan"
+                        style="@style/dianpu_shoukuaniv"
+                        android:background="@drawable/dianpu_shoukuan" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/dianpu_shoukuanll">
+                    <ImageView
+                        android:id="@+id/dianpu_shuma"
+                        style="@style/dianpu_shoukuaniv"
+                        android:background="@drawable/dianpu_shumayanquan" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/dianpu_shoukuanll">
+                    <ImageView
+                        android:id="@+id/dianpu_shaoma"
+                        style="@style/dianpu_shoukuaniv"
+                        android:background="@drawable/dianpu_shaomayanquan" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/dianpu_shoukuanll">
+
+                    <ImageView
+                        android:id="@+id/dianpu_weilianjie"
+                        style="@style/dianpu_shoukuaniv"
+                        android:background="@drawable/dianpu_weilianjie" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Utils.MyGridView
+                android:id="@+id/dianpu_gv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/bai"
+                android:gravity="center"
+                android:listSelector="@color/bai"
+                android:numColumns="4"
+                android:descendantFocusability="beforeDescendants">
+
+            </Utils.MyGridView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="124dp"
+                android:layout_marginTop="12dp">
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/dianpu_vp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </android.support.v4.view.ViewPager>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="5dp">
+                    <ImageView
+                        android:id="@+id/dianpu_vp1"
+                        style="@style/dianpu_vpyuandian"
+                        android:background="@drawable/dianpu_vpheidian" />
+                    <ImageView
+                        android:id="@+id/dianpu_vp2"
+                        style="@style/dianpu_vpyuandian"/>
+                    <ImageView
+                        android:id="@+id/dianpu_vp3"
+                        style="@style/dianpu_vpyuandian"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/bai"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:layout_width="4dp"
+                    android:layout_height="19dp"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/dianpu_fenxi"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="今日收入数据分析"
+                    android:textSize="16sp"
+                    android:textColor="@color/dianpu_shujufengxi"
+                    />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="历史数据"
+                    android:textColor="#999999"
+                    android:textSize="14sp"
+                    />
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="14dp"
+                    android:layout_marginRight="13dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/dianpu_fenxi_fanhui"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="177dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/dianpu_fenxitu">
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="221dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginBottom="19dp"
+                android:background="@color/bai"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="62dp"
+                    android:layout_height="65dp"
+                    android:background="@drawable/dianpu_tianjia"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:textColor="#f5a742"
+                    android:text="添加数据卡片"
+                    android:layout_marginTop="14dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+</LinearLayout>

@@ -1,0 +1,170 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <!--主页导航列表-->
+    <style name="shouye_daohang" >
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+
+    </style>
+    <!--主页导航按键图片-->
+    <style name="daohang_img" >
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+    </style>
+    <!--主页导航按键文字-->
+    <style name="daohang_tv" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/daohang_tv_hui</item>
+
+    </style>
+    <!--订单导航文字-->
+    <style name="dingdai_tv" >
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/daohanghei</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!--店铺成功开店文字-->
+    <style name="dianpu_chenggongkaidian">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/daohang_tv_lan</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <!--店铺收款线性布局-->
+    <style name="dianpu_shoukuanll">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <!--店铺收款图片-->
+    <style name="dianpu_shoukuaniv">
+        <item name="android:layout_width">58dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <!--店铺轮播图圆点-->
+    <style name="dianpu_vpyuandian">
+        <item name="android:layout_width">6dp</item>
+        <item name="android:layout_height">6dp</item>
+        <item name="android:layout_margin">6dp</item>
+        <item name="android:background">@drawable/dianpu_vpyuandian</item>
+    </style>
+    <!--导航栏相对布局-->
+    <style name="daohanglan_rl">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:background">@color/daohang_tv_lan</item>
+    </style>
+    <!--导航栏线性布局-->
+    <style name="daohanglan_ll">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <!--导航栏返回-->
+    <style name="daohanglan_fanhui">
+        <item name="android:layout_width">10dp</item>
+        <item name="android:layout_height">18dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:background">@drawable/kaidian_fanhui</item>
+    </style>
+    <!--导航栏标题-->
+    <style name="daohanglan_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textColor">@color/bai</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <!--导航栏标题-->
+    <style name="daohanglan_tv2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:textColor">@color/bai</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+    <!--店员信息相对布局-->
+    <style name="dianyuanxinxi_rl">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@color/bai</item>
+    </style>
+    <!--店员信息名称-->
+    <style name="dianyuanxinxi_name">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@color/dianyuanxinxi_name</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginLeft">12dp</item>
+    </style>
+    <!--店员输入框-->
+    <style name="dianyuanxinxi_edit">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColorHint">@color/dianyuanxinxi_edit</item>
+        <item name="android:textColor">@color/dianyuanxinxi_edit</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginRight">14dp</item>
+        <item name="android:background">@color/bai</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:gravity">center_vertical|right</item>
+    </style>
+    <!--对话框-->
+    <style name="transparentFrameWindowStyle" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/photo_choose_bg</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <!--对话框-->
+    <style name="main_menu_animstyle">
+        <item name="android:windowEnterAnimation">@anim/photo_dialog_in_anim</item>
+        <item name="android:windowExitAnimation">@anim/photo_dialog_out_anim</item>
+    </style>
+
+    <!--选择图片-->
+    <style name="ActionMenuTextStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Menu">
+        <item name="android:textSize">@dimen/action_text_size</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <!--选择图片-->
+    <style name="actionBarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+    </style>
+    <!--选择图片-->
+    <style name="actionBarPopupTheme" parent="ThemeOverlay.AppCompat.Light">
+    </style>
+    <!--选择图片-->
+    <style name="PhotoPickerTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/photopicker_background</item>
+        <item name="actionMenuTextAppearance">@style/ActionMenuTextStyle</item>
+        <!--<item name="actionBarTheme">@style/actionBarTheme</item>-->
+        <!--<item name="actionBarPopupTheme">@style/actionBarPopupTheme</item>-->
+    </style>
+</resources>

@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -12,7 +11,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,8 +22,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.Toast;
-
-import com.example.administrator.mybijie.MainActivity;
 import com.example.administrator.mybijie.R;
 import com.handmark.pulltorefresh.library.ILoadingLayout;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
@@ -44,7 +40,6 @@ import dianpu.DianPu_ShuMaYanQuan;
 import io.github.xudaojie.qrcodelib.CaptureActivity;
 
 import static android.app.Activity.RESULT_OK;
-import static com.example.administrator.mybijie.R.drawable.dianpu_kaidian;
 
 
 /**
@@ -180,7 +175,7 @@ public class dianpu_Fragment extends Fragment implements PullToRefreshBase.OnRef
                 }, 100);
                 //调用扫码界面
                 Intent intent = new Intent(getActivity(), CaptureActivity.class);
-                startActivityForResult(intent, 100);
+                startActivityForResult(intent, 999);
                 break;
             case R.id.dianpu_weilianjie://未连接
                 dianpuWeilianjie.setBackgroundResource(R.drawable.dianpu_weilianjie2);
@@ -427,7 +422,7 @@ public class dianpu_Fragment extends Fragment implements PullToRefreshBase.OnRef
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == RESULT_OK && requestCode == 100 && data != null) {
+        if (resultCode == RESULT_OK && requestCode == 999 && data != null) {
             String result = data.getStringExtra("result");
             Toast.makeText(getActivity(), result, Toast.LENGTH_SHORT).show();
         }

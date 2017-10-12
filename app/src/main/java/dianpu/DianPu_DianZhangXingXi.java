@@ -4,8 +4,12 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import android.os.Environment;
+import android.provider.MediaStore;
+import android.support.annotation.Nullable;;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,7 +26,6 @@ import com.bumptech.glide.Glide;
 import com.example.administrator.mybijie.R;
 import com.foamtrace.photopicker.ImageCaptureManager;
 import com.foamtrace.photopicker.PhotoPickerActivity;
-import com.foamtrace.photopicker.PhotoPreviewActivity;
 import com.foamtrace.photopicker.SelectModel;
 import com.foamtrace.photopicker.intent.PhotoPickerIntent;
 
@@ -132,7 +135,7 @@ public class DianPu_DianZhangXingXi extends Activity {
 
     }
 
-    @OnClick({R.id.dianzhangxinxi_fanhui, R.id.dianzhangxinxi_yinyezhezhao, R.id.dianzhangxinxi_jingying,R.id.dianzhangxinxi_touxiang})
+    @OnClick({R.id.dianzhangxinxi_fanhui, R.id.dianzhangxinxi_yinyezhezhao, R.id.dianzhangxinxi_jingying, R.id.dianzhangxinxi_touxiang})
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.dianzhangxinxi_fanhui:
@@ -161,6 +164,7 @@ public class DianPu_DianZhangXingXi extends Activity {
 
     /**
      * 图片选择器返回图片地址
+     *
      * @param requestCode
      * @param resultCode
      * @param data
@@ -189,6 +193,7 @@ public class DianPu_DianZhangXingXi extends Activity {
 
     /**
      * 把图片选择器返回图片设置到iv
+     *
      * @param paths
      */
     private void loadAdpater(ArrayList<String> paths) {
@@ -220,4 +225,5 @@ public class DianPu_DianZhangXingXi extends Activity {
                     .into(dianzhangxinxi_touxiang);
         }
     }
+
 }

@@ -45,7 +45,7 @@
             android:text="手机号码"
             style="@style/dianyuanxinxi_name"/>
         <EditText
-            android:hint="请输入你的身份实名认证的手机号码"
+            android:hint="请输入你的实名手机号码"
             style="@style/dianyuanxinxi_edit"
             />
     </RelativeLayout>

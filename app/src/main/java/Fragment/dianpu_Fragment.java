@@ -12,6 +12,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,7 +23,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
+import android.widget.Toast;
 
+import com.example.administrator.mybijie.MainActivity;
 import com.example.administrator.mybijie.R;
 import com.handmark.pulltorefresh.library.ILoadingLayout;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
@@ -38,7 +41,9 @@ import butterknife.OnClick;
 import butterknife.Unbinder;
 import dianpu.DianPu_KaiDian_Activity;
 import dianpu.DianPu_ShuMaYanQuan;
+import io.github.xudaojie.qrcodelib.CaptureActivity;
 
+import static android.app.Activity.RESULT_OK;
 import static com.example.administrator.mybijie.R.drawable.dianpu_kaidian;
 
 
@@ -163,6 +168,7 @@ public class dianpu_Fragment extends Fragment implements PullToRefreshBase.OnRef
                         dianpuShuma.setBackgroundResource(R.drawable.dianpu_shumayanquan);
                     }
                 }, 100);
+                startActivity(new Intent(getActivity(), DianPu_ShuMaYanQuan.class));
                 break;
             case R.id.dianpu_shaoma://扫码验券
                 dianpuShaoma.setBackgroundResource(R.drawable.dianpu_shaomayanquan2);
@@ -172,7 +178,9 @@ public class dianpu_Fragment extends Fragment implements PullToRefreshBase.OnRef
                         dianpuShaoma.setBackgroundResource(R.drawable.dianpu_shaomayanquan);
                     }
                 }, 100);
-                startActivity(new Intent(getActivity(), DianPu_ShuMaYanQuan.class));
+                //调用扫码界面
+                Intent intent = new Intent(getActivity(), CaptureActivity.class);
+                startActivityForResult(intent, 100);
                 break;
             case R.id.dianpu_weilianjie://未连接
                 dianpuWeilianjie.setBackgroundResource(R.drawable.dianpu_weilianjie2);
@@ -408,5 +416,20 @@ public class dianpu_Fragment extends Fragment implements PullToRefreshBase.OnRef
      */
     private void startTime() {
         new TimeThread().start();
+    }
+
+    /**
+     * 扫描二维码返回值
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK && requestCode == 100 && data != null) {
+            String result = data.getStringExtra("result");
+            Toast.makeText(getActivity(), result, Toast.LENGTH_SHORT).show();
+        }
     }
 }
